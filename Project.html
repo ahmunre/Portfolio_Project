@@ -6,22 +6,90 @@
         </title>
         <meta name="description" content="A portfolio page">
         <meta name="author" content="Elton Griffith">
+        <style>
+
+            body {
+                background-color: black;
+            }
+
+            .NavigationBar {
+                
+                height: 60px;
+                background-color: gray;
+                margin: 150px;
+                margin-bottom: 0px;
+                overflow: hidden;
+        
+            }
+           
+            .MainHeadline {
+                text-align: center;
+                font-size: 40px;
+                font-weight: 900;
+            }
+
+            .MainImage {
+                display: block;
+               margin: 0 auto;
+                padding: 20px;
+            
+            }
+
+            .TabBody {
+                display: none;
+            }
+            .TabBody.Selected {
+                display: block;
+                background-color: #fff;
+                margin: auto;
+                margin-top: 0px;
+                margin-right: auto;
+                margin-bottom: 0px;
+                margin-left: auto;
+                width: calc(100% - 4rem);
+                max-width: 72rem;
+                z-index: 2;
+     
+            
+            }
+            .ContentArea {
+                background-color: #fff;
+                padding: 60px;
+                margin: 150px;
+                margin-top: 0px;
+              
+   
+            }
+            .ArticleArea {
+                display: flex;
+                flex-wrap: wrap;
+                padding: 0 4px;
+                border: #eeeeee;
+                border-left-width: 2px;
+                border-style: solid;
+                border-top-width: 2px;
+                
+            }
+        </style>
     </head>
 
     <body>
         <div id="main_page"  class="MainPage">
             <div name="nav_bar" class="NavigationBar">
-                <span>Bio</span>
+                
+               <span name="page_tabs" class="PageTabs">Bio</span>
                 <span>Projects</span>
                 <span>Contact</span>
+            
             </div>
 
             <div id="content_area" class="ContentArea">
+                <div id="tab_body1" class="TabBody1 TabBody Selected">
                 <h1 id="main_headline" class="MainHeadline">Success Requires Sacrifice</h1>
                     <p>Hello, my name is Elton and I am a recent graduate of the Thinkful Engineering Flex program. What drives my need for coding is knowing that I am contributing to an end product that profoundly affects the lives of everyone, every day and I get to quench my thirst for cutting edge technology and it’s applications the end user.
                         When I am not coding I can be found in my other sanctuary, the gym as I enjoy equally enjoy both academic and physical pursuits. One of my ultimate aims is to amalgamate these two pursuits into an end product which will benefit all. Let me not forget to mention that I am a voracious reader and consumer of anything Anime or comic book related.
                     </p>
-                    <img src="Screenshots/Initial_Page.jpg" alt="InitialPage" style="width:50%;height:50%"  ></div>
+                    <img src="Screenshots/Initial_Page.jpg" alt="InitialPage" style="width:1000px ; height:500px" id="main_image" class="MainImage" >
 
                 <div id="article_area1" class="ArticleArea">
                     <h2>Projects and Screenshots</h2>
@@ -53,7 +121,8 @@
                     <a href="ahmunre@yahoo.com" target="blank">Email</a>
                     <a href="https://github.com/ahmunre" target="blank">Github</a>
                     <a href="https://www.linkedin.com" target="blank">Linkedin</a>
-                    
+
+                    </div>
                 </div>
                 
             </div>
