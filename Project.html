@@ -1,131 +1,312 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>
-            Elton's Portfolio Page
-        </title>
-        <meta name="description" content="A portfolio page">
-        <meta name="author" content="Elton Griffith">
-        <style>
+<html lang="en">
 
-            body {
-                background-color: black;
-            }
+<head>
+    <title>
+        Elton's Portfolio Page
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="A portfolio page">
+    <meta name="author" content="Elton Griffith">
+    <script src="https://kit.fontawesome.com/925431af50.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
 
-            .NavigationBar {
-                
-                height: 60px;
-                background-color: gray;
-                margin: 150px;
-                margin-bottom: 0px;
-                overflow: hidden;
+    <style>
+        body {
+            background-color: black;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .MainPage {
+            width: 100%;
+        }
+
+        .NavigationBar {
+            height: 60px;
+            background-color: gray;
+            margin: 150px;
+            margin-bottom: 0px;
+            overflow: hidden;
+            text-transform: uppercase;
+            letter-spacing: 0.075rem;
+        }
+
+        .TabButton
+        {
+            height: 100%;
+            display: block;
+            float: left;
+            font-size: xx-large;
+            padding: 8px;
+        }
+
+        .TabButton.Selected
+        {
+            background: white;
+        }
+
+        .MainHeadline {
+            text-align: center;
+            font-size: 40px;
+            font-weight: 900;
+        }
+
+        p {
+            display: flex;
+        }
+
+        .TabBody {
+            display: none;
+        }
+
+        .TabBody.Selected {
+            display: block;
+            background-color: #fff;
+            margin: auto;
+            margin-top: 0px;
+            margin-right: auto;
+            margin-bottom: 0px;
+            margin-left: auto;
+            width: calc(100% - 4rem);
+            max-width: 72rem;
+            z-index: 2;
+            height: 100%;
+        }
+
+        .ContentArea {
+            background-color: #fff;
+            padding: 60px;
+            margin: 150px;
+            margin-top: 0px;
+        }
+
+        .ProjectsArea {
+            border-radius: 5px;
+            background-color: bisque;
+            padding: 0 4px;
+            
+            border-left-width: 2px;
+            border-style: solid;
+            border-top-width: 2px;
+        }
+
+        .Project {
+            width: 98%;
+            background: inherit;
+            
+            margin: 12px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .ProjectTitle {
+            text-align: center;
+        }
+
+        .ProjectTitle::after {
+            display: block;
+            width: 65%;
+            margin-left: 17.5%;
+            height: 2px;
+            content: " ";
+            clear: both;
+            background-color: black;
+        }
+
+        .ProjectDescription {
+            float: left;
+            padding-left: 4px;
+            width: 40%;
+        }
+
+        .ProjectImageSpan {
+            float: left;
+            padding: 4px;
+            width: 51%;
+            overflow: hidden;
+        }
+
+        .ProjectImageSpan>img {
+            width: 229px;
+            padding: 4px;
+            height: 146px;
+        }
+
+        li {
+            display: inline;
+            text-decoration: none;
+            padding: 30px;
+        }
+
+        .HeroImage {
+            max-width: 100px;
+            max-height: 100px;
+            border-radius: 50%;
+        }
+
+        .ArticleArea
+        {
+            overflow: visible;
+            position: relative;
+            height: 116px;
+        }
+
+        .TechnologyArea,
+        .LinksArea {
+            float: left;
+            width: 50%;
         
-            }
-           
-            .MainHeadline {
-                text-align: center;
-                font-size: 40px;
-                font-weight: 900;
-            }
+        }
+        .fa-pagelines,
+        .fa-github-square {
+            padding: 10px;
+            margin: -7px;
+          
+        }
+        .fa-js,
+        .fa-css3-alt,
+        .fa-html5 {
+            display: inline-block;
+                 
+        }
 
-            .MainImage {
-                display: block;
-               margin: 0 auto;
-                padding: 20px;
+        .ContactInfo {
+            clear: both;
             
+        }
+        @media only screen and (min-width: 500px) {
+            html,
+            body {
+                width: 100%;
+             }
+        }
+    </style>
+    <script>
+        function selectBio()
+        {
+            selectTab("Bio");
+        }
+        function selectContacts()
+        {
+            selectTab("Contacts");
+        }
+        function selectProjects()
+        {
+            selectTab("Projects");
+        }
+        function selectTab(name)
+        {
+            var i;
+            // Get the navbar and the tabcontainer
+            var navbar = document.getElementById("nav_bar");
+            var tabArea = document.getElementById("tab_container");
+            // Remove the 'Selected' class from all children of the navbar and the tabs
+            // read: clear all tabs and buttons
+            var buttons = navbar.children;
+            for(i = 0; i < buttons.length; i++)
+            {
+                var button = buttons[i];
+                button.classList.remove("Selected");
             }
+            var tabs = tabArea.children;
+            for(i = 0; i < tabs.length; i++)
+            {
+                var tab = tabs[i];
+                tab.classList.remove("Selected");
+            }
+            // Get the tab and button to select
+            var selectedButton = document.getElementsByClassName(name + "TabButton")[0];
+            var selectedTabBody = document.getElementsByClassName(name + "TabBody")[0];
+            // Add the 'Selected' class to the tab and the button
+            selectedButton.classList.add("Selected");
+            selectedTabBody.classList.add("Selected");
+            // Done.
+        }
+    </script>
+</head>
 
-            .TabBody {
-                display: none;
-            }
-            .TabBody.Selected {
-                display: block;
-                background-color: #fff;
-                margin: auto;
-                margin-top: 0px;
-                margin-right: auto;
-                margin-bottom: 0px;
-                margin-left: auto;
-                width: calc(100% - 4rem);
-                max-width: 72rem;
-                z-index: 2;
-     
-            
-            }
-            .ContentArea {
-                background-color: #fff;
-                padding: 60px;
-                margin: 150px;
-                margin-top: 0px;
-              
-   
-            }
-            .ArticleArea {
-                display: flex;
-                flex-wrap: wrap;
-                padding: 0 4px;
-                border: #eeeeee;
-                border-left-width: 2px;
-                border-style: solid;
-                border-top-width: 2px;
-                
-            }
-        </style>
-    </head>
+<body>
+    <div id="main_page" class="MainPage">
+        <div id="nav_bar" class="NavigationBar">
+            <span class="TabButton BioTabButton Selected" onclick="selectBio()">Bio</span>
+            <span class="TabButton ProjectsTabButton" onclick="selectProjects()">Projects</span>
+            <span class="TabButton ContactsTabButton" onclick="selectContacts()">Contact</span>
+        </div>
 
-    <body>
-        <div id="main_page"  class="MainPage">
-            <div name="nav_bar" class="NavigationBar">
-                
-               <span name="page_tabs" class="PageTabs">Bio</span>
-                <span>Projects</span>
-                <span>Contact</span>
-            
-            </div>
-
-            <div id="content_area" class="ContentArea">
-                <div id="tab_body1" class="TabBody1 TabBody Selected">
-                <h1 id="main_headline" class="MainHeadline">Success Requires Sacrifice</h1>
-                    <p>Hello, my name is Elton and I am a recent graduate of the Thinkful Engineering Flex program. What drives my need for coding is knowing that I am contributing to an end product that profoundly affects the lives of everyone, every day and I get to quench my thirst for cutting edge technology and it’s applications the end user.
-                        When I am not coding I can be found in my other sanctuary, the gym as I enjoy equally enjoy both academic and physical pursuits. One of my ultimate aims is to amalgamate these two pursuits into an end product which will benefit all. Let me not forget to mention that I am a voracious reader and consumer of anything Anime or comic book related.
+        <div id="content_area" class="ContentArea">
+            <div id="tab_container" class="TabBody1 TabBody Selected">
+                <div id="article_main" class="Article ArticleMain TabBody BioTabBody Selected">
+                    <h1 id="main_headline" class="MainHeadline">Success Requires Sacrifice</h1>
+                    <div id="hero_area">
+                        <img id="hero_image" class="HeroImage" src="Screenshots/HeroImage.jpg" alt="Main Image" />
+                    </div>
+                    <p>Hello, my name is Elton and I am a recent graduate of the Thinkful Engineering Flex program. What
+                        drives my need for coding is knowing that I am contributing to an end product that profoundly
+                        affects the lives of everyone, every day and I get to quench my thirst for cutting edge
+                        technology and it’s applications the end user.
+                        When I am not coding I can be found in my other sanctuary, the gym as I enjoy equally enjoy both
+                        academic and physical pursuits. One of my ultimate aims is to amalgamate these two pursuits into
+                        an end product which will benefit all. Let me not forget to mention that I am a voracious reader
+                        and consumer of anything Anime or comic book related.
                     </p>
-                    <img src="Screenshots/Initial_Page.jpg" alt="InitialPage" style="width:1000px ; height:500px" id="main_image" class="MainImage" >
+                </div>
 
-                <div id="article_area1" class="ArticleArea">
+                <div class="ProjectsArea TabBody ProjectsTabBody">
                     <h2>Projects and Screenshots</h2>
-                        <p>This Application tests the trivia knowledge of both the casual and avid Marvel Cinematic Universe fan. There are ten questions covering a range of questions, with a platform friendly user interface and end-user feedback once the quiz is ended.</p>
-                        <p>This page renders positive feedback when the user gets the correct answer</p>
-                        <p>This page renders the questions with the options from which the end-user can select from</p>
-                    <img src="Screenshots/Question_Page.jpg" alt="QuestionPage" style="width:25%;height:25%">
-                    <img src="Screenshots/Correct_Page.jpg" alt="CorrectPage" style="width:25%;height:25%">
-                    <img src="Screenshots/Incorrect_Page.jpg" alt="IncorrectPage" style="width:25%;height:25%">
-                    <img src="Screenshots/Final_Page.jpg" alt="FinalPage" style="width:25%;height:25%">
-                </div>
-                <div id="article_area2" class="ArticleArea">
-                    <h2>Technology used</h2>
-                    <!--Font awesome icons represent technolgy-->
-                    <ul>
-                        <li>HTML</li>
-                        <li>Javascript</li>
-                        <li>CSS</li>
-                    </ul>
-                      <!--Font awesome icons will represnt links to github and live repo-->
-                    <h2>Links</h2>
-                    <a href="https://github.com/ahmunre/Portfolio_Project.git" target="blank">Github</a>
-                    <a href="https://ahmunre.github.io/Marvel-Superhero-Quizz-NewApp/">Live Link</a>
-                </div>
-              
-                <div id="contact_info" class="ContactInfo">
-                    <h2>Contact Information</h2>
-                     <!--Font awesome icons will represnt links to contact info-->
-                    <a href="ahmunre@yahoo.com" target="blank">Email</a>
-                    <a href="https://github.com/ahmunre" target="blank">Github</a>
-                    <a href="https://www.linkedin.com" target="blank">Linkedin</a>
-
+                    <div id="project_1" class="Project">
+                        <h3 class="ProjectTitle">Marvel Quiz</h3>
+                        <div id="project_1_description" class="ProjectDescription">
+                            <p>This Application tests the trivia knowledge of both the casual and avid Marvel Cinematic
+                                Universe fan. There are ten questions covering a range of questions, with a platform
+                                friendly user interface and end-user feedback once the quiz is ended. The screensshots
+                                in no particular order the questions rendered screen complete with user options, the correct
+                                feedback and incorrect feedback pages and finally the end and restart page.
+                            </p>
+                        </div>
+                        <div id="image_span" class="ProjectImageSpan Imagespan">
+                            <img src="Screenshots/Question_Page.jpg" alt="QuestionPage">
+                            <img src="Screenshots/Correct_Page.jpg" alt="CorrectPage">
+                            <img src="Screenshots/Incorrect_Page.jpg" alt="IncorrectPage">
+                            <img src="Screenshots/Final_Page.jpg" alt="FinalPage">
+                        </div>
+                    </div>
+                    <div id="article_area2" class="ArticleArea">
+                        <div class="TechnologyArea">
+                            <h2>Technology used</h2>
+                            <!--Font awesome icons represent technolgy-->
+                            <ul>
+                                <li><i class="fab fa-js fa-2x"></i></li>
+                                <li><i class="fab fa-css3-alt fa-2x"></i></li>
+                                <li><i class="fab fa-html5 fa-2x"></i></li>
+                            </ul>
+                        </div>
+                        <!--Font awesome icons will represnt links to github and live repo-->
+                        <div class="LinksArea">
+                            <h2>Links</h2>
+                            <a href="https://github.com/ahmunre/Portfolio_Project.git" target="blank">Github<i
+                                    class="fab fa-github-square fa-2x"></i></a>
+                            <a href="https://ahmunre.github.io/Marvel-Superhero-Quizz-NewApp/">Live link<i
+                                    class="fab fa-pagelines fa-2x"></i></a>
+                        </div>
                     </div>
                 </div>
-                
+
+                <div id="contact_info" class="ContactInfo TabBody ContactsTabBody">
+                    <h2>Contact Information</h2>
+                    <!--Font awesome icons will represnt links to contact info-->
+        
+                    <a href="ahmunre@yahoo.com" target="blank"><i class="fas fa-envelope fa-2x"></i></a>
+                    <a href="https://github.com/ahmunre" target="blank"><i class="fab fa-github fa-2x"></i></a>
+                    <a href="https://www.linkedin.com" target="blank"><i class="fab fa-linkedin fa-2x"></i></a>
+                </div>
             </div>
         </div>
-    </body>
+    </div>
+</body>
+
 </html>
