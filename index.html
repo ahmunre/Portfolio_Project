@@ -1,17 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width">
-        <title>Links To Project work</title>
-    </head>
-    <body>
-        <ul>
-       <li><a href="Project.html">Actual Project file</a></li>
 
-        <li>><a href="portwireframe.html">Project wireframe</a></li>
+<head>
+    <title>
+        Elton's Portfolio Page
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="A portfolio page">
+    <meta name="author" content="Elton Griffith">
+    <script src="https://kit.fontawesome.com/925431af50.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="main.css"/>
+    <script type="text/javascript" src="main.js"></script>
+</head>
 
-        </ul>
+<body>
+    <div id="main_page" class="MainPage">
+        <div id="nav_bar" class="NavigationBar">
+            <span class="TabButton BioTabButton Selected" onclick="selectBio()">Bio</span>
+            <span class="TabButton ProjectsTabButton" onclick="selectProjects()">Projects</span>
+            <span class="TabButton ContactsTabButton" onclick="selectContacts()">Contact</span>
+        </div>
 
-    </body>
+        <div id="content_area" class="ContentArea">
+            <div id="tab_container" class="TabBody1 TabBody Selected">
+                <div id="article_main" class="Article ArticleMain TabBody BioTabBody Selected">
+                    <h1 id="main_headline" class="MainHeadline">Success Requires Sacrifice</h1>
+                    <div id="hero_area">
+                        <img id="hero_image" class="HeroImage" src="Screenshots/HeroImage.jpg" alt="Main Image" />
+                    </div>
+                    <p>Hello, my name is Elton and I am a recent graduate of the Thinkful Engineering Flex program. What
+                        drives my need for coding is knowing that I am contributing to an end product that profoundly
+                        affects the lives of everyone, every day and I get to quench my thirst for cutting edge
+                        technology and its applications the end user.
+                        When I am not coding I can be found in my other sanctuary, the gym as I enjoy equally enjoy both
+                        academic and physical pursuits. One of my ultimate aims is to amalgamate these two pursuits into
+                        an end product which will benefit all. Let me not forget to mention that I am a voracious reader
+                        and consumer of anything Anime or comic book related.
+                    </p>
+                </div>
+
+                <div class="ProjectsArea TabBody ProjectsTabBody">
+                    
+                    <div id="project_1" class="Project">
+                        <h3 class="ProjectTitle">Marvel Quiz</h3>
+                        <div id="project_1_description" class="ProjectDescription">
+                            <p>This Application tests the trivia knowledge of both the casual and avid Marvel Cinematic
+                                Universe fan. There are ten questions covering a range of questions, with a platform
+                                friendly user interface and end-user feedback once the quiz is ended. The screenshots
+                                
+                            </p>
+                        </div>
+                        <div id="image_span" class="ProjectImageSpan Imagespan">
+                            <img src="Screenshots/Question_Page.jpg" alt="QuestionPage">
+                            
+                        </div>
+                    </div>
+                    <div id="article_area2" class="ArticleArea">
+                        <div class="TechnologyArea">
+                            <h2>Technology used</h2>
+                            <!--Font awesome icons represent technolgy-->
+                            <ul>
+                                <li><i class="fab fa-js fa-2x"></i></li>
+                                <li><i class="fab fa-css3-alt fa-2x"></i></li>
+                                <li><i class="fab fa-html5 fa-2x"></i></li>
+                            </ul>
+                        </div>
+                        <!--Font awesome icons will represnt links to github and live repo-->
+                        <div class="LinksArea">
+                            <h2>Links</h2>
+                            <a href="https://github.com/ahmunre/Marvel-Superhero-Quizz-NewApp" target="blank">Github<i
+                                    class="fab fa-github-square fa-2x"></i></a>
+                            <a href="https://ahmunre.github.io/Marvel-Superhero-Quizz-NewApp/" target="blank">Live link<i
+                                    class="fab fa-pagelines fa-2x"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="contact_info" class="ContactInfo TabBody ContactsTabBody">
+                    <h2>Contact Information</h2>
+                    <!--Font awesome icons will represnt links to contact info-->
+        
+                    <a href="mailto:ahmunre@yahoo.com" target="blank"><i class="fas fa-envelope fa-2x"></i></a>
+                    <a href="https://github.com/ahmunre" target="blank"><i class="fab fa-github fa-2x"></i></a>
+                    <a href="https://www.linkedin.com" target="blank"><i class="fab fa-linkedin fa-2x"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>
