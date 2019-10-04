@@ -140,6 +140,7 @@ li {
     position: relative;
     height: auto;
     display: flex;
+    clear: both;
 }
 
 .TechnologyArea,
