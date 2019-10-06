@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <title>
         Elton's Portfolio Page
@@ -12,7 +11,7 @@
     <script src="https://kit.fontawesome.com/925431af50.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="main.css"/>
-    <script type="text/javascript" src="main.js"></script>
+    <script src="main.js"></script>
 </head>
 
 <body>
@@ -25,39 +24,43 @@
     </header>
 
         <main id="content_area" class="ContentArea">
-            <div id="tab_container" class="TabBody1 TabBody Selected">
+            <section id="tab_container" class="TabBody1 TabBody Selected">
                 <article id="article_main" class="Article ArticleMain TabBody BioTabBody Selected">
                     <h1 id="main_headline" class="MainHeadline">Success Requires Sacrifice</h1>
                     <figure id="hero_area">
                         <img id="hero_image" class="HeroImage" src="Screenshots/HeroImage.jpg" alt="Main Image" />
                     </figure>
                 
-                    <section>Hello, my name is Elton and I am a recent graduate of the Thinkful Engineering Flex program. What
+                    <p>
+                        Hello, my name is Elton and I am a recent graduate of the Thinkful Engineering Flex program. What
                         drives my need for coding is knowing that I am contributing to an end product that profoundly
                         affects the lives of everyone, every day and I get to quench my thirst for cutting edge
                         technology and its applications the end user.
                         When I am not coding I can be found in my other sanctuary, the gym as I enjoy equally enjoy both
                         academic and physical pursuits. One of my ultimate aims is to amalgamate these two pursuits into
                         an end product which will benefit all. Let me not forget to mention that I am a voracious reader
-                        and consumer of anything Anime or comic book related.
-                    </section>
+                        and consumer of anything Anime or comic book related. 
+                    </P>
                 </article>
-            </div>
+            </section>
                 <section class="ProjectsArea TabBody ProjectsTabBody">
-                    
-                    <details id="project_1" class="Project">
-                        <header class="ProjectTitle">Marvel Quiz</header>
-                        <summary id="project_1_description" class="ProjectDescription">
-                            <p>This Application tests the trivia knowledge of both the casual and avid Marvel Cinematic
+
+                    <article id="project_1" class="Project">
+                        <h2 class="ProjectTitle">Marvel Quiz</h2>
+                        <details id="project_1_description" class="ProjectDescription">
+                            <summary>
+                                This Application tests the trivia knowledge of both the casual and avid Marvel Cinematic
                                 Universe fan. There are ten questions covering a range of questions, with a platform
-                                friendly user interface and end-user feedback once the quiz is ended. The screenshots
-                            </p>
-                        
-                        <div id="image_span" class="ProjectImageSpan Imagespan">
-                            <img src="Screenshots/Question_Page.jpg" alt="QuestionPage">
-                        </div>
-                        </summary>      
-                    </details>
+                                friendly user interface and end-user feedback once the quiz is ended. The application contains a page for when the end-user
+                                responses are correct complete with feedback, a page for when the answer is incorrect also with the appropriate
+                                feedback and finally a page to fully restart the application.
+                            </summary>
+                        </details>
+                        <figure id="image_span" class="ProjectImageSpan Imagespan">
+                            <img src="Screenshots/Question_Page.jpg" alt="QuestionPage"/>
+                        </figure>         
+                    </article>
+                
                     <footer id="article_area2" class="ArticleArea">
                         <section class="TechnologyArea">
                             <h2>Technology used</h2>
@@ -78,18 +81,16 @@
                         </section>
                     </footer>
                 </section>
-
-                <div id="contact_info" class="ContactInfo TabBody ContactsTabBody">
+        
+                <section id="contact_info" class="ContactInfo TabBody ContactsTabBody">
                     <h2>Contact Information</h2>
                     <!--Font awesome icons will represnt links to contact info-->
         
                     <a href="mailto:ahmunre@yahoo.com" target="blank"><i class="fas fa-envelope fa-2x"></i></a>
                     <a href="https://github.com/ahmunre" target="blank"><i class="fab fa-github fa-2x"></i></a>
                     <a href="https://www.linkedin.com" target="blank"><i class="fab fa-linkedin fa-2x"></i></a>
-                </div>
-            </>
+                </section>  
         </main>
-    </main>
 </body>
 
 </html>

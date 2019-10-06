@@ -3,7 +3,7 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
-p {
+summary {
     font-size: 18px;
 }
 
@@ -28,6 +28,7 @@ p {
     float: left;
     font-size: xx-large;
     padding: 8px;
+    margin: 0px;
 }
 
 .TabButton.Selected
@@ -43,6 +44,7 @@ p {
 
 p {
     display: flex;
+    font-size: 18px;
 }
 
 .TabBody {
@@ -61,6 +63,7 @@ p {
     max-width: 72rem;
     z-index: 2;
     height: 100%;
+    
 }
 
 .ContentArea {
@@ -68,13 +71,14 @@ p {
     padding: 60px;
     margin: 150px;
     margin-top: 0px;
+    
+    
 }
 
 .ProjectsArea {
     border-radius: 5px;
     background-color: bisque;
     padding: 0 4px;
-    
     border-left-width: 2px;
     border-style: solid;
     border-top-width: 2px;
@@ -107,12 +111,13 @@ p {
     float: left;
     padding-left: 4px;
     width: 40%;
+    margin-top: 20px;
 }
 
 .ProjectImageSpan {
-    float: left;
+    float: right;
     padding: 4px;
-    width: 51%;
+    width: 50%;
     overflow: hidden;
 }
 
@@ -147,6 +152,7 @@ li {
 .LinksArea {
     float: left;
     width: 50%;
+    color: yellowgreen;
 
 }
 .fa-pagelines,
@@ -158,16 +164,21 @@ li {
 .fa-js,
 .fa-css3-alt,
 .fa-html5 {
-    display: inline-block;
-         
+    display: inline-block;         
 }
-
+a {
+    color: yellowgreen;
+}
+a:hover {
+    color: red;
+}
 .ContactInfo {
     clear: both;
     
 }
 .TechnologyArea  {
-    text-align: ;
+    text-align: center ;
+    color: yellowgreen;
 }
 
 .TechnologyArea ul {
