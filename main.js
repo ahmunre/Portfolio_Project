@@ -15,7 +15,7 @@
             var i;
             // Get the navbar and the tabcontainer
             var navbar = document.getElementById("nav_bar");
-            var tabArea = document.getElementById("tab_container");
+            var tabArea = document.getElementById("content_area");
             // Remove the 'Selected' class from all children of the navbar and the tabs
             // read: clear all tabs and buttons
             var buttons = navbar.children;

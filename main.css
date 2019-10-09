@@ -7,6 +7,10 @@ summary {
     font-size: 18px;
 }
 
+details summary::-webkit-details-marker {
+    display: none;
+}
+
 .MainPage {
     width: 100%;
 }
@@ -29,11 +33,14 @@ summary {
     font-size: xx-large;
     padding: 8px;
     margin: 0px;
+    border: none;
+    background-color: gray;
 }
 
 .TabButton.Selected
 {
     background: white;
+    
 }
 
 .MainHeadline {
@@ -152,7 +159,7 @@ li {
 .LinksArea {
     float: left;
     width: 50%;
-    color: yellowgreen;
+    color: black;
 
 }
 .fa-pagelines,
@@ -167,7 +174,7 @@ li {
     display: inline-block;         
 }
 a {
-    color: yellowgreen;
+    color: black;
 }
 a:hover {
     color: red;
@@ -178,7 +185,7 @@ a:hover {
 }
 .TechnologyArea  {
     text-align: center ;
-    color: yellowgreen;
+    color: black;
 }
 
 .TechnologyArea ul {
