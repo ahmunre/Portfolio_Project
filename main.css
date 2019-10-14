@@ -70,13 +70,16 @@ p {
     max-width: 72rem;
     z-index: 2;
     height: 100%;
+    width: calc(100% - 1rem)
     
 }
 
 .ContentArea {
     background-color: #fff;
-    padding: 100px;
-    margin-top: px;  
+    /*padding: 100px;
+    margin-top: px;  */
+    margin: 0;
+    padding: 15px;
 }
 
 #hero_area {
@@ -97,7 +100,6 @@ p {
 .Project {
     width: 98%;
     background: inherit;
-    
     margin: 12px;
     border-radius: 10px;
     overflow: hidden;
@@ -120,14 +122,20 @@ p {
 .ProjectDescription {
     float: left;
     padding-left: 4px;
-    width: 40%;
+    width: 100%;
     margin-top: 20px;
+}
+
+.ProjectDescription p {
+    padding-right: 1rem;
+    padding-left: 0;
+    text-align: justify;
 }
 
 .ProjectImageSpan {
     float: right;
     padding: 4px;
-    width: 50%;
+    width: 100%;
     overflow: hidden;
 }
 
@@ -197,6 +205,9 @@ a:hover {
     border-radius: 50%;
     display: block;  
 }
+address span {
+    display: block;
+}
 .TechnologyArea  {
     text-align: center ;
     color: black;
@@ -213,45 +224,74 @@ a:hover {
     margin-right: 1rem;
 }
 
-@media only screen and (min-width: 1824px) { }
+@media only screen and (min-width: 1824px) {
+    .ProjectDescription{
+
+        width: 40%;
+    }
+    .ProjectImageSpan{
+        width: 47%
+    }
+ }
 /* large/retina device 2560 wide (mac-book pro) */
-@media only screen and (min-width: 2530px) { }
+@media only screen and (min-width: 2530px) {
+    .ProjectDescription{
+
+        width: 40%;
+    }
+    .ProjectImageSpan{
+        width: 47%
+    }
+ }
 /* displays/ screens 1680x1050 (macbook mini screen) */
-@media only screen and (min-width: 1650px) and (max-width: 1889px) { } 
+@media only screen and (min-width: 1650px) and (max-width: 1889px) {
+    .ProjectDescription{
+
+        width: 40%;
+    }
+    .ProjectImageSpan{
+        width: 47%
+    }
+ } 
 /*large screens, desktops */
-@media only screen and (max-width: 1200px) {}
+@media only screen and (min-width: 1200px) {
+    .ProjectDescription{
+
+        width: 40%;
+    }
+    .ProjectImageSpan{
+        width: 47%
+    }
+}
 /* medium devices */
-@media only screen and (min-width: 992px) {}
+@media only screen and (min-width: 992px) {
+    .ProjectDescription{
+
+        width: 40%;
+    }
+    .ProjectImageSpan{
+        width: 50%
+    }
+}
+
 /* display device 768 and 1280 res. */
 @media (min-width: 768px) and (max-width: 1280px) { 
 .TabBody.Selected {
     width: calc(100%);
 
     }
+    .ProjectDescription{
+
+        width: 40%;
+    }
+    .ProjectImageSpan{
+        width: 47%
+    }
 }
 /*Display device between 1024 and 1280 (projectors)*/
 @media (min-width: 1024px) and (max-width: 1280px) { }
-/* small devices/ Tablets */
-@media only screen and (max-width: 768px) {
-    .ArticleArea {
-        height: auto;
-        display: flex;
-    }
-    .ProjectDescription {
-        width: 100%;
-    }
-    .ProjectDescription p {
-        padding-right: 1rem;
-        padding-left: 0;
-        text-align: justify;
-    }
-    .ProjectImageSpan {
-        width: 100%;
-    }
-    .TabBody.Selected {
-        width: calc(100% - 1rem)
-    }
-}
+
+
 
 /* Ipads (orientation landscape) */
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
@@ -264,39 +304,7 @@ a:hover {
     }
 }
 
-/* Mobile devices such as cellphones */
-@media only screen and (max-width: 480px) {
-    .ArticleArea {
-        height: auto;
-        display: flex;
-    }
-    .ContentArea {
-        margin: 0;
-        padding: 15px;
-    }
-    .NavigationBar {
-        margin: 0;
-    }
-    .TabButton {
-        font-size: large;
-    }
-}
 
-/* custom iphone retina*/
-@media only screen and (max-width: 320px) {
-    .ArticleArea {
-        height: auto;
-        display: flex;
-    }
-}
-
-/* s5 displays */
-@media only screen and (max-width: 415px) {
-    .ArticleArea {
-        height: auto;
-        display: flex;
-    }
-}
 
 
 
