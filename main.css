@@ -6,6 +6,9 @@ body {
 
 summary {
     font-size: 18px;
+    padding: 0 20px 0 0px;
+    text-align: left;
+
 }
 
 details summary::-webkit-details-marker {
@@ -23,6 +26,7 @@ details summary::-webkit-details-marker {
     overflow: hidden;
     text-transform: uppercase;
     letter-spacing: 0.075rem;
+    margin: 0;
 }
 
 .TabButton
@@ -93,6 +97,7 @@ p {
     background-color: bisque;
     padding: 0 4px;
     border-left-width: 2px;
+    border-right-width: 2px;
     border-style: solid;
     border-top-width: 2px;
 }
@@ -100,7 +105,7 @@ p {
 .Project {
     width: 98%;
     background: inherit;
-    margin: 12px;
+    margin: 10px;
     border-radius: 10px;
     overflow: hidden;
 }
@@ -137,12 +142,13 @@ p {
     padding: 4px;
     width: 100%;
     overflow: hidden;
+    margin-right: 15px;
 }
 
 .ProjectImageSpan>img {
-    width: 453px;
+    width: 100%;
     padding: 4px;
-    height: 280px;
+    height: auto;
 }
 
 li {
@@ -224,7 +230,7 @@ address span {
     margin-right: 1rem;
 }
 
-@media only screen and (min-width: 1824px) {
+@media only screen and (min-width: 1200px) {
     .ProjectDescription{
 
         width: 40%;
@@ -233,26 +239,7 @@ address span {
         width: 47%
     }
  }
-/* large/retina device 2560 wide (mac-book pro) */
-@media only screen and (min-width: 2530px) {
-    .ProjectDescription{
 
-        width: 40%;
-    }
-    .ProjectImageSpan{
-        width: 47%
-    }
- }
-/* displays/ screens 1680x1050 (macbook mini screen) */
-@media only screen and (min-width: 1650px) and (max-width: 1889px) {
-    .ProjectDescription{
-
-        width: 40%;
-    }
-    .ProjectImageSpan{
-        width: 47%
-    }
- } 
 /*large screens, desktops */
 @media only screen and (min-width: 1200px) {
     .ProjectDescription{
@@ -262,36 +249,6 @@ address span {
     .ProjectImageSpan{
         width: 47%
     }
-}
-/* medium devices */
-@media only screen and (min-width: 992px) {
-    .ProjectDescription{
-
-        width: 40%;
-    }
-    .ProjectImageSpan{
-        width: 50%
-    }
-}
-
-/* display device 768 and 1280 res. */
-@media (min-width: 768px) and (max-width: 1280px) { 
-.TabBody.Selected {
-    width: calc(100%);
-
-    }
-    .ProjectDescription{
-
-        width: 40%;
-    }
-    .ProjectImageSpan{
-        width: 47%
-    }
-}
-/*Display device between 1024 and 1280 (projectors)*/
-@media (min-width: 1024px) and (max-width: 1280px) { }
-
-
 
 /* Ipads (orientation landscape) */
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
